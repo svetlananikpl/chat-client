@@ -1,0 +1,15 @@
+<form *ngIf="!hasCurrentUser && !(isAuth | async)" class="add-form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="name" required>
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <button
+    class="submit-button"
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!name.value">
+    LOGIN
+  </button>
+</form>

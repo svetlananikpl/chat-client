@@ -1,0 +1,5 @@
+<mat-card *ngFor="let message of messages; index as i; trackBy: trackByFn" [style.background-color]="getColor(i)">
+  <span>({{message.time | date:'shortTime'}})&nbsp;</span>
+  <span class="user">{{message.username}}:&nbsp;</span>
+  {{message.text}}
+</mat-card>

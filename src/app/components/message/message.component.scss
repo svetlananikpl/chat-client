@@ -1,0 +1,17 @@
+@import "src/assets/scss/variables";
+
+.message-form {
+  display: flex;
+}
+
+.message-text {
+  width: 100%;
+
+  border: 1px solid $color-black-100;
+  border-radius: 5px;
+}
+
+.message-text:focus-visible {
+  outline: none;
+  border: 1px solid $color-black-200;
+}

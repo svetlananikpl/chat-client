@@ -1,0 +1,13 @@
+@import "src/assets/scss/variables";
+
+.aside{
+  display: flex;
+  flex-direction: column;
+
+  width: 10rem;
+  height: 100%;
+
+  padding: 1rem;
+
+  background-color: $color-black-200;
+}

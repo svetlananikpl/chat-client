@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+
+  height: calc(100vh - 3rem);
+}
+
+.chat-view {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 4;
+
+  padding: 1rem;
+}
+
+.conversation {
+  flex: 1 0 auto;
+}

@@ -1,0 +1,11 @@
+<div *ngIf="isAuth" class="wrapper">
+  <div class="chat-view">
+    <app-conversation class="conversation" [messages]="messages"></app-conversation>
+    <app-message [checkedUser]="checkedUser" (onSubmitMessage)="addMessage($event)"></app-message>
+  </div>
+  <app-users
+    [currentUsers]="currentUsers"
+    [currentUser]="currentUser"
+    (onClickedUser)="addUserToMessage($event)"
+  ></app-users>
+</div>
