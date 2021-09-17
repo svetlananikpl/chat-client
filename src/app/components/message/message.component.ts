@@ -1,8 +1,9 @@
-import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-message',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.scss']
 })
@@ -14,7 +15,7 @@ export class MessageComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     const previousValue = changes.checkedUser.previousValue;
     const currentValue = changes.checkedUser.currentValue;
-    if (currentValue && previousValue !== currentValue) {
+    if (previousValue !== currentValue) {
       const newMessage = currentValue + ' ' + this.message.value;
       this.message.setValue(newMessage);
     }
